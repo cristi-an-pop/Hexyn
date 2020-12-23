@@ -13,8 +13,9 @@ public class BCButtons : MonoBehaviour
     */
     public static int EpilepticAttack = 0;
 
+    string htmlRed = "#cc0000";
     string htmlPurple = "#9400D3";
-    string htmlBlue = "#0000CD";
+    string htmlBlue = "#0000b3";
     string htmlGray = "#A9A9A9";
     string htmlGreen = "#32CD32";
     string htmlCyan = "#00CED1";
@@ -38,6 +39,7 @@ public class BCButtons : MonoBehaviour
     void Awake()
     {
         //HTML TO RGB CONVERTIONS
+        ColorUtility.TryParseHtmlString(htmlRed, out red_color);
         ColorUtility.TryParseHtmlString(htmlPurple, out purple_color);
         ColorUtility.TryParseHtmlString(htmlBlue, out blue_color);
         ColorUtility.TryParseHtmlString(htmlGray, out gray_color);

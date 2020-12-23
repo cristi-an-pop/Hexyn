@@ -55,7 +55,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FlexibleColorPicker\Scripts\FCP_SpriteMeshEditor.cs" />
      <Compile Include="Assets\Scripts\MainScene_Button.cs" />
      <Compile Include="Assets\Scripts\PlayerS.cs" />
      <Compile Include="Assets\Scripts\AdsButton.cs" />
@@ -64,11 +63,10 @@
      <Compile Include="Assets\Scripts\Left_MovementButton.cs" />
      <Compile Include="Assets\Scripts\CustomizeScene_Buttons.cs" />
      <Compile Include="Assets\Scripts\Settings\SettingsButton.cs" />
-     <Compile Include="Assets\Scripts\SaveSystem.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\ColorLerp.cs" />
      <Compile Include="Assets\Scripts\ColorS.cs" />
-     <Compile Include="Assets\FlexibleColorPicker\Scripts\FlexibleColorPicker.cs" />
+     <Compile Include="Assets\Scripts\bgSync.cs" />
      <Compile Include="Assets\Scripts\SpawnActivation.cs" />
      <Compile Include="Assets\Scripts\ArrayPrefs2.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
@@ -80,10 +78,6 @@
      <Compile Include="Assets\Scripts\MainMenuOptions.cs" />
      <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\HexagonTypeScripts\Hexagon2.cs" />
-     <Compile Include="Assets\Scripts\ApplyColor.cs" />
-     <Compile Include="Assets\FlexibleColorPicker\ExampleScene\FCP_ExampleScript.cs" />
-     <Compile Include="Assets\Scripts\ColorChangerButton.cs" />
-     <None Include="Assets\FlexibleColorPicker\Materials\FCP_Gradient.shader" />
  <Reference Include="Unity.XR.Management">
  <HintPath>D:/unity/projects/Hexyn - Mobile/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
  </Reference>
@@ -143,9 +137,6 @@
  </Reference>
  <Reference Include="Unity.XR.Management.Editor">
  <HintPath>D:/unity/projects/Hexyn - Mobile/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/unity/projects/Hexyn - Mobile/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
  <HintPath>D:/unity/projects/Hexyn - Mobile/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>

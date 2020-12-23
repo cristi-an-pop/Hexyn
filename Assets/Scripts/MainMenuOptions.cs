@@ -12,8 +12,6 @@ public class MainMenuOptions : MonoBehaviour
 
     void Start()
     {
-        PlayerData data = SaveSystem.LoadPlayer();
-
         //(int)PlayerPrefs.GetInt("HighScore") = data.highscore;
 
         highscoreText.text = "HIGHSCORE\n" + ((int)PlayerPrefs.GetFloat("HighScore")).ToString();

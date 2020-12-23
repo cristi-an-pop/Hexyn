@@ -11,9 +11,5 @@ public class Homepage_Button : MonoBehaviour
     public void ClickTheButton()
     {
         SceneManager.LoadScene(0);
-        Button b = GetComponent<Button>();
-        AudioSource audio = GetComponent<AudioSource>();
-        b.onClick.AddListener(delegate () { audio.Play(); });
-
     }
 }

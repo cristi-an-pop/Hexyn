@@ -11,8 +11,5 @@ public class CustomizeColor_Button : MonoBehaviour
     public void ClickTheButton()
     {
         SceneManager.LoadScene(2);
-        Button b = GetComponent<Button>();
-        AudioSource audio = GetComponent<AudioSource>();
-        b.onClick.AddListener(delegate () { audio.Play(); });
     }
 }

@@ -140,6 +140,5 @@ public class Player : MonoBehaviour
         //dupa 1 secunda
         Time.timeScale = 0f;
         Time.fixedDeltaTime = Time.fixedDeltaTime * slowDownFactor;
-        SaveSystem.SavePlayer(this);
     }
 }

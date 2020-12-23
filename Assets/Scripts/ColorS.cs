@@ -11,35 +11,55 @@ public class ColorS : MonoBehaviour
     private Color[] _colors = new Color[7];
     private int _i;
 
-    private Color _lerpedColor = Color.magenta;
+    private Color _lerpedColor;
+
+    string htmlRed = "#cc0000";
+    string htmlPurple = "#9400D3";
+    string htmlBlue = "#0000b3";
+    string htmlGreen = "#32CD32";
+    string htmlCyan = "#00CED1";
+    string htmlYellow = "#FFDC00";
+
+    public Color red_color;
+    public Color blue_color;
+    public Color green_color;
+    public Color cyan_color;
+    public Color purple_color;
+    public Color yellow_color;
 
     Camera _cam;
-    public SpriteRenderer _background;
 
     void Awake()
     {
-        _colors[0] = Color.magenta;
-        _colors[1] = Color.red;
-        _colors[2] = Color.yellow;
-        _colors[3] = Color.green;
-        _colors[4] = Color.cyan;
-        _colors[5] = Color.blue;
-        _colors[6] = Color.magenta;
+        ColorUtility.TryParseHtmlString(htmlRed, out red_color);
+        ColorUtility.TryParseHtmlString(htmlPurple, out purple_color);
+        ColorUtility.TryParseHtmlString(htmlBlue, out blue_color);
+        ColorUtility.TryParseHtmlString(htmlGreen, out green_color);
+        ColorUtility.TryParseHtmlString(htmlCyan, out cyan_color);
+        ColorUtility.TryParseHtmlString(htmlYellow, out yellow_color);
+
+        defaultColor = PlayerPrefsX.GetColor("BackgroundColor");
+
+        _colors[0] = purple_color;
+        _colors[1] = red_color;
+        _colors[2] = yellow_color;
+        _colors[3] = green_color;
+        _colors[4] = cyan_color;
+        _colors[5] = blue_color;
+        _colors[6] = purple_color;
+
+        _lerpedColor = purple_color;
     }
 
     void Start()
     {
-        if(PlayerPrefsX.GetColor("BackgroundColor") != Color.black)
-            defaultColor = PlayerPrefsX.GetColor("BackgroundColor");
-
         _cam = GetComponent<Camera>();
-        _background = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
         if(BCButtons.EpilepticAttack == 0)
-            _background.color = defaultColor;
+            _cam.backgroundColor = defaultColor;
         else
         {
             if (_colorstep < changeColorEvery)
