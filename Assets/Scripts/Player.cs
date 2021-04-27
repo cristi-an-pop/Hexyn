@@ -32,6 +32,8 @@ public class Player : MonoBehaviour
 
     public static int HighScoreCount;
 
+    public SpriteRenderer _player;
+
     private void Awake()
     {
         HighScoreCount = (int)PlayerPrefs.GetFloat("HighScore");
